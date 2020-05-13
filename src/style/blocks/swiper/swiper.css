@@ -23,7 +23,7 @@
   position: absolute;
   top: 44%;
   right: 24px;
-  background-image: url("../../../images/slider-right.svg");
+  background-image: url(/src/images/slider-right.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
   position: absolute;
   top: 44%;
   left: 24px;
-  background-image: url("../../../images/slider-left.svg");
+  background-image: url(/src/images/slider-left.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
