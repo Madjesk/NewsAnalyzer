@@ -11,7 +11,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 570px) {
   .results__header {
     padding-top: 32px;
     flex-direction: column;
