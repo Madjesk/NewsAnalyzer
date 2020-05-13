@@ -1,6 +1,6 @@
 # NewsAnalyzer
 
-# Ссылка на проект -  
+# Ссылка на проект - https://barabanovklim.github.io/NewsAnalyzer/index.html
 
 ## Версия v0.0.1
 
