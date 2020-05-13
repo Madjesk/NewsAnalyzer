@@ -1,0 +1,8 @@
+.footer__icon {
+  margin: 0;
+  transition: transform .4s;
+}
+
+.footer__icon:hover {
+  transform: scale(1.5);
+}

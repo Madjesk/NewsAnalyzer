@@ -1,0 +1,44 @@
+.footer__link {
+  margin-right: 34px;
+  display: flex;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+.footer__link:hover {
+  background-size: 100% 2px;
+}
+
+.footer__link:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__link {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__link {
+    margin: 0;
+    font-size: 18px;
+    line-height: 48px;
+    height: 20px;
+  }
+}
+
+
+
+

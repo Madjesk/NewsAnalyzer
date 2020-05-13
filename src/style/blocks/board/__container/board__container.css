@@ -1,0 +1,7 @@
+.board__container {
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+  padding: 0 5%;
+  margin: 0 auto;
+}

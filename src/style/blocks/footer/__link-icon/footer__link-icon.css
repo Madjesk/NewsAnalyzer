@@ -1,0 +1,9 @@
+.footer__link-icon {
+  text-decoration: none;
+  margin: 0;
+
+}
+
+.footer__link-icon:first-child {
+  margin-right:27.89px ;
+}

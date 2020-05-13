@@ -1,0 +1,24 @@
+.commits__link {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #1A1B22;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+.commits__link:hover {
+  background-size: 100% 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .commits__link {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+.card__date {
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  margin: 20px 0 12px 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .card__date {
+    margin: 16px 16px 12px 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card__date {
+    margin: 16px 16px 12px 16px;
+  }
+}
+
+

@@ -1,0 +1,40 @@
+@import url(./_active/header__link_active.css);
+
+.header__link {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  height: 78px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  transition: 0.3s;
+}
+
+.header__link:nth-child(2n):hover {
+  color:#FFFFFF;
+}
+
+.header__link:first-of-type {
+ margin-right: 34px;
+}
+
+@media screen and (max-width: 768px){
+  .header__link {
+    height: 63px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .header__link {
+    font-size: 16px;
+    height: 55px;
+  }
+
+  .header__link:first-of-type {
+    margin-right: 11px;
+   }
+}

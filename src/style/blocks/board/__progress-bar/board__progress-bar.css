@@ -1,0 +1,13 @@
+.board__progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 89%;
+}
+
+@media screen and (max-width:320px) {
+  .board__progress-bar {
+    width: 82%;
+  }
+}

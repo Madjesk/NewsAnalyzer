@@ -1,0 +1,10 @@
+@import url("./__disk/preloader__disk.css");
+@import url("./__preloader__text/preloader__text.css");
+@import url("./__container/preloader__container.css");
+@import url("./_invisible/preloader_invisible.css");
+
+.preloader {
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+}
