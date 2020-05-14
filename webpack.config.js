@@ -14,7 +14,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './src/js/[name].[chunkhash].js'
+        filename: 'js/[name].[chunkhash].js'
     },
     module: {
         rules: [{
@@ -56,7 +56,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './src/css/[name].[contenthash].css'
+            filename: 'css/[name].[contenthash].css'
         }),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
