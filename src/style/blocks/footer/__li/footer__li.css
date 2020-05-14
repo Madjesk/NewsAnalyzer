@@ -3,7 +3,7 @@
     margin-right: 34px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 707px) {
     .footer__li {
         margin: 0;
     }

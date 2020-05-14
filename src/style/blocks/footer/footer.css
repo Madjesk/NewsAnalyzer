@@ -4,7 +4,7 @@
 @import url("./__icon/footer__icon.css");
 @import url("./__social-container/footer__social-container.css");
 @import url("./__link-icon/footer__link-icon.css");
-
+@import url("./__li/footer__li.css");
 
 .footer {
   max-width: 1440px;
@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 707px) {
   .footer {
     height: 224px;
     flex-wrap: wrap;

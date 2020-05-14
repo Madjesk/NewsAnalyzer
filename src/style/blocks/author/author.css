@@ -19,7 +19,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 560px) {
   .author {
     padding-top: 32px;
     padding-bottom: 32px;

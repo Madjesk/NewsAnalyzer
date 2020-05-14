@@ -8,11 +8,11 @@
 
 @media screen and (max-width: 768px) {
   .search__container {
-    margin-bottom: 128px;
+    margin-bottom: 68px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 568px) {
   .search__container {
     width: 90%;
     margin-bottom: 55px;
