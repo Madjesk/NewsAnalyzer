@@ -1,0 +1,34 @@
+@import url("./__copyright/footer__copyright.css");
+@import url("./__links-container/footer__links-container.css");
+@import url("./__link/footer__link.css");
+@import url("./__icon/footer__icon.css");
+@import url("./__social-container/footer__social-container.css");
+@import url("./__link-icon/footer__link-icon.css");
+@import url("./__li/footer__li.css");
+
+.footer {
+  max-width: 1440px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .footer {
+    height: 224px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+}

@@ -1,0 +1,15 @@
+@import url("./__container/results__container.css");
+@import url("./__header/results__header.css");
+@import url("./__link/results__link.css");
+@import url("./__title/results__title.css");
+@import url("./__icon/results.icon.css");
+@import url("./__cards-container/results__cards-container.css");
+@import url("./__button-more/results__button-more.css");
+
+.results {
+  width: 100%;
+  max-width: 1440px;
+  background: #F5F6F7;
+  margin: 0 auto;
+  box-sizing:border-box;
+}

@@ -1,0 +1,7 @@
+.technologies__image {
+  transition: transform .4s;
+}
+
+.technologies__image:hover {
+  transform: scale(1.1);
+}

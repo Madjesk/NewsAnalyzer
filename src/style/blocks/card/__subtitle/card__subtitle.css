@@ -1,0 +1,20 @@
+.card__subtitle {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  margin-left: 24px;
+  max-height: 88px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .card__subtitle {
+    margin: 10px 16px 0px 16px;
+  }
+}
+
+

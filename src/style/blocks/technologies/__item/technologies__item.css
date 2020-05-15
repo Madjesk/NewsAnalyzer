@@ -1,0 +1,9 @@
+.technologies__item {
+  width: 120px;
+}
+
+@media screen and (max-width: 320px) {
+  .technologies__item {
+    margin-bottom: 42px;
+  }
+}

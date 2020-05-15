@@ -1,0 +1,25 @@
+@import url('./__photo/commits-card__photo.css');
+@import url('./__date/commits-card__date.css');
+@import url('./__info/commits-card__info.css');
+@import url('./__mail/commits-card__mail.css');
+@import url('./__name/commits-card__name.css');
+@import url('./__text/commits-card__text.css');
+
+.commits-card {
+  max-width: 400px;
+  height: 288px;
+  padding: 24px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 320px) {
+  .commits-card {
+    width: 288px;
+    padding: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

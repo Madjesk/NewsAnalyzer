@@ -1,0 +1,14 @@
+@import url("./__subtitle/empty__subtitle.css");
+@import url("./__image/empty__image.css");
+@import url("./__title/empty__title.css");
+@import url("./_invisible/empty_invisible.css");
+
+.empty {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 374px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
