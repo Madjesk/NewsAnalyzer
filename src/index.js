@@ -30,7 +30,7 @@ const dataStorage = new DataStorage(showNews, haveResults, input);
 const cardList = new NewsCardList(cardsContainer, buttonMore, MAX_CARDS_IN_ROW);
 
 cardList.buttonAddEventListener();
-searchInput.formAddEventListener();
+searchInput.formAddEventListener(); 
 dataStorage.checkLocalStorageValue();
 
 //отрисовываем карточки новостей и добавляем в массив
@@ -44,6 +44,7 @@ function showNews(res) {
 
 //Получили запрос на поиск новостей
 function receivedRequest() {
+    event.preventDefault();
     if (searchInput.validate(input.value)) {
         cardList.HideOrShowButtonMore(false); 
         searchInput.disactivateForm(); 

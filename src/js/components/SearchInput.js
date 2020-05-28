@@ -30,14 +30,8 @@ export default class SearchInput {
         }
     }
 
-    beginSearch() {
-        event.preventDefault();
-        // console.log('значение инпута ' + this.input.value);
-        this.callBack(this.input.value);
-    }
-
     formAddEventListener() {
-        this.form.addEventListener('submit', this.beginSearch.bind(this))
+        this.form.addEventListener('submit', this.callBack)
     }
 
 }
