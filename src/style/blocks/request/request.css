@@ -2,6 +2,7 @@
 @import url("./__subtitle/request__subtitle.css");
 @import url("./__title/request__title.css");
 @import url("./__total/request__total.css");
+@import url("./__word/request__word.css");
 
 .request {
   width: 100%;

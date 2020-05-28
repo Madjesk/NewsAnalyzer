@@ -82,7 +82,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/analytics/analytic.html',
-            filename: 'analytic.html'
+            filename: 'analytic.html'           
         }),
         new WebpackMd5Hash()
     ]

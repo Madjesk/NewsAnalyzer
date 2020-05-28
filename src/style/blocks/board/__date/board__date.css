@@ -6,3 +6,13 @@
   color: #1A1B22;
   height: 24px;
 }
+
+.board__day {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1A1B22;
+  height: 24px;
+  margin-left: 20px;
+}
