@@ -28,103 +28,45 @@
             Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
           </p>
           <form class="search__form">
-            <input type="text" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="25">
-            <button class="search__button">Искать</button>
+            <input type="text" class="search__input" placeholder="Введите тему новости">
+            <button  class="search__button">Искать</button>
+            <span class="search__error hide">Нужно ввести ключевое слово</span>
+            <!-- <span class="search__error hide">Введите от 2 до 30 символов</span> -->
           </form>
         </div>
       </section>
       <section class="results">
-        <div class="preloader preloader_invisible">
+        <div class="preloader hide">
           <div class="preloader__container">
             <i class="preloader__disk"></i>
           </div>
           <p class="preloader__text">Идет поиск новостей...</p>
         </div>
-        <div class="empty empty_invisible">
+        <div class="empty hide">
           <img src="<%=require('./images/not-found_v1.svg').default %>" alt="Лупа с грустным смайлом внутри" class="empty__image">
           <h2 class="empty__title">Ничего не найдено</h2>
           <p class="empty__subtitle">
             К сожалению по вашему запросу ничего не найдено.
           </p>
         </div>
-        <div class="results__container">
-          <div class="results__header">
+        <div class="error hide">
+          <img src="<%=require('./images/not-found_v1.svg').default %>" alt="Лупа с грустным смайлом внутри" class="error__image">
+          <p class="error__text">
+            Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз
+          </p>
+        </div>
+        <div class="results__container hide">
+          <div class="results__header hide">
             <h2 class="results__title">Результаты поиска</h2>
             <a class="results__link" href="./analytic.html">
               Посмотреть аналитику
               <img src="<%=require('./images/Arrow.svg').default %>" alt="Cтрелочка" class="results__icon">
             </a>
+          </div>      
+          <div class="results__cards-container">          
+            
           </div>
-          <div class="results__cards-container">
-            <div class="card">
-              <a href="#" class="card__link">
-                <img src="<%=require('./images/image_1.png').default %>" alt="Фотография новости" class="card__image">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h4 class="card__title">Национальное достояние – парки</h4>
-                  <p class="card__subtitle">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-                  <p class="card__origin">Лента.ру</p>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="card__link">
-                <img src="<%=require('./images/image_2.png').default %>" alt="Фотография новости" class="card__image">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h4 class="card__title">Лесные огоньки: история одной фотографии</h4>
-                  <p class="card__subtitle">
-                    Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                    из местных чудес природы.
-                  </p>
-                  <p class="card__origin">Медуза</p>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="card__link">
-                <img src="<%=require('./images/image_3.png').default %>" alt="Фотография новости" class="card__image">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h4 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                  <p class="card__subtitle">
-                    Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                  </p>
-                  <p class="card__origin">Риа</p>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="card__link">
-                <img src="<%=require('./images/image_4.png').default %>" alt="Фотография новости" class="card__image">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h4 class="card__title">Национальное достояние – парки</h4>
-                  <p class="card__subtitle">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-                  <p class="card__origin">Дзен</p>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="card__link">
-                <img src="<%=require('./images/image_5.png').default %>" alt="Фотография новости" class="card__image">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h4 class="card__title">Лесные огоньки: история одной фотографии</h4>
-                  <p class="card__subtitle">
-                    Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
-                  </p>
-                  <p class="card__origin">Афиша</p>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="card__link">
-                <img src="<%=require('./images/image_6.png').default %>" alt="Фотография новости" class="card__image">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h4 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                  <p class="card__subtitle">
-                    Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                  </p>
-                  <p class="card__origin">Медиазона</p>
-              </a>
-            </div>
-            <button class="results__button-more">Показать ещё</button>
-          </div>
+          <button class="results__button-more hide">Показать ещё</button>
         </div>
       </section>
       <section class="author">
@@ -148,8 +90,8 @@
     <footer class="footer">
       <span class="footer__copyright">&#169; Барабанов Клим</span>
       <ul class="footer__links-container">   
-        <li class="footer__li"><a class="footer__link" target="_blank" href="./index.html">Главная</a></li>
-        <li class="footer__li"><a class="footer__link" target="_blank" href="./about.html">О проекте</a></li>
+        <li class="footer__li"><a class="footer__link" href="./index.html">Главная</a></li>
+        <li class="footer__li"><a class="footer__link" href="./about.html">О проекте</a></li>
         <li class="footer__li"><a class="footer__link" target="_blank" href="https://praktikum.yandex.ru">Яндекс.Практикум</a></li>
       </ul>
       <div class="footer__social-container">
@@ -161,6 +103,6 @@
         </a>
       </div>
     </footer>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

@@ -2,8 +2,9 @@
   max-width: 608px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 80px;
+  margin-bottom: 130px;
   width: 60%;
+  max-height: 279px;
 }
 
 @media screen and (max-width: 768px) {
