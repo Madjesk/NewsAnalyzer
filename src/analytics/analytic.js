@@ -8,12 +8,13 @@ import {
     datesColumn,
     boardRow,
     daysColumn,
-    daysOfWeek
+    daysOfWeek,
+    progressColumn
 } from "../js/constants/const"
 import {getNumberDate, getWeekDay, addWeekDatesToArray} from '../js/utils/utils';
 
 const stat = new Statistics(request, requestsPerWeek, headlinesMentions, mounth, datesColumn, boardRow,
-                            getNumberDate, daysColumn, daysOfWeek, getWeekDay, addWeekDatesToArray);
+                            getNumberDate, daysColumn, daysOfWeek, getWeekDay, addWeekDatesToArray, progressColumn);
 
 stat.settingInformation();
 stat.settingMounth();

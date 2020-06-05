@@ -49,6 +49,14 @@
   }
 }
 
+@media screen and (max-width: 760px) {
+  .card {
+    width: 300px;
+    max-height: 446px;
+  }
+}
+
+
 @media screen and (max-width: 320px) {
   .card {
     width: 300px;

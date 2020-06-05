@@ -3,11 +3,11 @@ import getCompleteDate from '../utils/utils';
 export default class NewsCard {
     constructor(article, defaultPhoto) {
         this.defaultPhoto = defaultPhoto;
-        this.card = this.createCard(article);
+        this.card = this._createCard(article);
     }
 
     //Создаём карточку новости 
-    createCard(article) {
+    _createCard(article) {
 
         const card = document.createElement('div');
         card.classList.add('card');
@@ -50,7 +50,6 @@ export default class NewsCard {
         cardLink.appendChild(cardSubtitle);
         cardLink.appendChild(cardOrigin);
 
-        // console.log(card);
         return card;
     }
 }

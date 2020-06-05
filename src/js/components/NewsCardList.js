@@ -29,7 +29,7 @@ export default class NewsCardList {
   }
 
   //Увеличиваем начальное число на 3 и отправляем отрисовывать
-  increaseInitialNumber() {
+  _increaseInitialNumber() {
     this.initialNumber = this.initialNumber + this.MAX_CARDS_IN_ROW;
     this.renderNews();
   }
@@ -42,6 +42,6 @@ export default class NewsCardList {
 
   //Вешаем слушатель на кнопку "Показать ещё"
   buttonAddEventListener() {
-    this.buttonMore.addEventListener('click', this.increaseInitialNumber.bind(this))
+    this.buttonMore.addEventListener('click', this._increaseInitialNumber.bind(this))
   }
 }

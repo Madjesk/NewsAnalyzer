@@ -12,28 +12,48 @@
   height: 64px;
   border: none;
   outline: none;
-  margin: 56px 39% 80px 39%;
   cursor: pointer;
   opacity: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .results__button-more:hover {
   background-color:#E8E8E8;
   opacity: 0.9;
+} 
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 64px;
+  padding-top: 64px;
+  padding-bottom: 80px;
 }
 
 @media screen and (max-width: 768px) {
   .results__button-more {
     width: 240px;
     height: 56px;
-    margin: 22px 34% 40px 34%;
+  }
+
+  .button-container {
+    height: 56px;
+    padding-top: 22px;
+    padding-bottom: 40px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .results__button-more {
     width: 288px;
-    margin: 0px 0% 44px 0%;
+  }
+
+  .button-container {
+    padding-top: 12px;
+    padding-bottom: 44px;
   }
 }
 

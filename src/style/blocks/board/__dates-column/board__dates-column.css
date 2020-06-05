@@ -13,3 +13,72 @@
   justify-content:space-around;
   align-items: flex-start;
 }
+
+@media screen and (max-width: 1250px) {
+  .board__days-column {
+    width: 10.5%;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .board__days-column {
+    width: 11%;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .board__days-column {
+    width: 11.5%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .board__days-column {
+    width: 12.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .board__days-column {
+    width: 10.5%;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .board__days-column {
+    width: 11.5%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .board__days-column {
+    width: 12.5%;
+  }
+}
+
+@media screen and (max-width: 477px) {
+  .board__days-column {
+    width: 13.5%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .board__days-column {
+    width: 14.5%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .board__days-column {
+    width: 15.5%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .board__days-column {
+    width: 17.5%;
+  }
+}
+
+
+
