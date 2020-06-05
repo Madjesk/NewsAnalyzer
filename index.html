@@ -1,108 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Поиск и анализ новостей">
-    <meta name="author" content="Клим Барабанов">
-    <meta name="keywords" content="News, NewsAnalyzer, HTML, CSS, JavaScript">
-    <link rel="stylesheet" href="css/main.a65be885b4ad296ea26c.css">
-    <link rel="icon" href="images/favicon.png">
-    <title>Главная</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Поиск и анализ новостей">
+  <meta name="author" content="Клим Барабанов">
+  <meta name="keywords" content="News, NewsAnalyzer, HTML, CSS, JavaScript">
+  <link rel="stylesheet" href="css/main.06519921e43452206d83.css">
+  <link rel="icon" href="images/favicon.png">
+  <title>Главная</title>
 </head>
+
 <body class="page">
-    <header class="header header_dark">
-      <div class="header__container">
-        <a href="./index.html" class="header__title">NewsAnalyzer</a>
-        <nav class="header__links-container">
-          <a href="./index.html" class="header__link header__link_active">Главная</a>
-          <a href="./about.html" class="header__link">О проекте</a>
-        </nav>
+  <header class="header header_dark">
+    <div class="header__container">
+      <a href="./index.html" class="header__title">NewsAnalyzer</a>
+      <nav class="header__links-container">
+        <a href="./index.html" class="header__link header__link_active">Главная</a>
+        <a href="./about.html" class="header__link">О проекте</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="search">
+      <div class="search__container">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <p class="search__subtitle">
+          Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+        </p>
+        <form class="search__form">
+          <input type="text" class="search__input" placeholder="Введите тему новости">
+          <button class="search__button">Искать</button>
+          <span class="search__error hide">Нужно ввести ключевое слово</span>
+          <!-- <span class="search__error hide">Введите от 2 до 30 символов</span> -->
+        </form>
       </div>
-    </header>
-    <main>
-      <section class="search">
-        <div class="search__container">
-          <h1 class="search__title">Что в мире творится?</h1>
-          <p class="search__subtitle">
-            Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
-          </p>
-          <form class="search__form">
-            <input type="text" class="search__input" placeholder="Введите тему новости">
-            <button  class="search__button">Искать</button>
-            <span class="search__error hide">Нужно ввести ключевое слово</span>
-            <!-- <span class="search__error hide">Введите от 2 до 30 символов</span> -->
-          </form>
+    </section>
+    <section class="results">
+      <div class="preloader hide">
+        <div class="preloader__container">
+          <i class="preloader__disk"></i>
         </div>
-      </section>
-      <section class="results">
-        <div class="preloader hide">
-          <div class="preloader__container">
-            <i class="preloader__disk"></i>
-          </div>
-          <p class="preloader__text">Идет поиск новостей...</p>
+        <p class="preloader__text">Идет поиск новостей...</p>
+      </div>
+      <div class="empty hide">
+        <img src="images/not-found_v1.svg" alt="Лупа с грустным смайлом внутри"
+          class="empty__image">
+        <h2 class="empty__title">Ничего не найдено</h2>
+        <p class="empty__subtitle">
+          К сожалению по вашему запросу ничего не найдено.
+        </p>
+      </div>
+      <div class="error hide">
+        <img src="images/not-found_v1.svg" alt="Лупа с грустным смайлом внутри"
+          class="error__image">
+        <p class="error__text">
+          Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и
+          попробуйте ещё раз
+        </p>
+      </div>
+      <div class="results__container hide">
+        <div class="results__header hide">
+          <h2 class="results__title">Результаты поиска</h2>
+          <a class="results__link" href="./analytic.html">
+            Посмотреть аналитику
+            <img src="images/Arrow.svg" alt="Cтрелочка" class="results__icon">
+          </a>
         </div>
-        <div class="empty hide">
-          <img src="images/not-found_v1.svg" alt="Лупа с грустным смайлом внутри" class="empty__image">
-          <h2 class="empty__title">Ничего не найдено</h2>
-          <p class="empty__subtitle">
-            К сожалению по вашему запросу ничего не найдено.
-          </p>
+        <div class="results__cards-container">
         </div>
-        <div class="error hide">
-          <img src="images/not-found_v1.svg" alt="Лупа с грустным смайлом внутри" class="error__image">
-          <p class="error__text">
-            Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз
-          </p>
-        </div>
-        <div class="results__container hide">
-          <div class="results__header hide">
-            <h2 class="results__title">Результаты поиска</h2>
-            <a class="results__link" href="./analytic.html">
-              Посмотреть аналитику
-              <img src="images/Arrow.svg" alt="Cтрелочка" class="results__icon">
-            </a>
-          </div>      
-          <div class="results__cards-container">          
-            
-          </div>
+        <div class="button-container">
           <button class="results__button-more hide">Показать ещё</button>
         </div>
-      </section>
-      <section class="author">
-        <picture class="author__photo">
-          <source srcset="images/girl1440.png" media="(min-width: 1440px)">
-          <source srcset="images/girl768.png" media="(min-width: 768px)">
-          <source srcset="images/girl320.png" media="(min-width: 320px)">
-          <img  src="images/girl1440.png" alt="Фотография автора">
-        </picture>
-        <div class="author__container">
-          <h2 class="author__title">Об авторе</h2>
-          <p class="author__subtitle">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
-         </p>
-          <p class="author__subtitle">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
-          </p>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <span class="footer__copyright">&#169; Барабанов Клим</span>
-      <ul class="footer__links-container">   
-        <li class="footer__li"><a class="footer__link" href="./index.html">Главная</a></li>
-        <li class="footer__li"><a class="footer__link" href="./about.html">О проекте</a></li>
-        <li class="footer__li"><a class="footer__link" target="_blank" href="https://praktikum.yandex.ru">Яндекс.Практикум</a></li>
-      </ul>
-      <div class="footer__social-container">
-        <a href="https://github.com/BarabanovKlim" target="_blank" class="footer__link-icon">
-          <img src="images/git.svg" alt="Иконка github" class="footer__icon">
-        </a>
-        <a href="https://www.facebook.com" target="_blank" class="footer__link-icon">
-          <img src="images/fb.svg" alt="Иконка facebook" class="footer__icon">
-        </a>
+       
       </div>
-    </footer>
-    <script type="module" src="js/main.e28956368d7abb7f8d95.js"></script>
+    </section>
+    <section class="author">
+      <picture class="author__photo">
+        <source srcset="images/girl1440.png" media="(min-width: 1440px)">
+        <source srcset="images/girl768.png" media="(min-width: 768px)">
+        <source srcset="images/girl320.png" media="(min-width: 320px)">
+        <img src="images/girl1440.png" alt="Фотография автора">
+      </picture>
+      <div class="author__container">
+        <h2 class="author__title">Об авторе</h2>
+        <p class="author__subtitle">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
+          технологиями разработки владеете.
+        </p>
+        <p class="author__subtitle">
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <span class="footer__copyright">&#169; Барабанов Клим</span>
+    <ul class="footer__links-container">
+      <li class="footer__li"><a class="footer__link" href="./index.html">Главная</a></li>
+      <li class="footer__li"><a class="footer__link" href="./about.html">О проекте</a></li>
+      <li class="footer__li"><a class="footer__link" target="_blank"
+          href="https://praktikum.yandex.ru">Яндекс.Практикум</a></li>
+    </ul>
+    <div class="footer__social-container">
+      <a href="https://github.com/BarabanovKlim" target="_blank" class="footer__link-icon">
+        <img src="images/git.svg" alt="Иконка github" class="footer__icon">
+      </a>
+      <a href="https://www.facebook.com" target="_blank" class="footer__link-icon">
+        <img src="images/fb.svg" alt="Иконка facebook" class="footer__icon">
+      </a>
+    </div>
+  </footer>
+  <script type="module" src="js/main.2d67e76de45be29ef1c2.js"></script>
 </body>
+
 </html>
