@@ -19,3 +19,15 @@
     margin-bottom: 55px;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .search__container {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__container { 
+    margin-bottom: 175px;
+  }
+}

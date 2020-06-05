@@ -56,7 +56,6 @@ function receivedRequest() {
                 if (res.totalResults == 0) {
                     noResults();
                 } else {
-                    // console.log(res);
                     dataStorage.clearLocalStorage();
                     dataStorage.writingToLocalStorage(res, input);
                     haveResults();

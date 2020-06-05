@@ -1,8 +1,7 @@
-// import getCompleteDate from '../utils/utils';
 export default class Statistics {
     constructor
         (request, requestsPerWeek, headlinesMentions, mounth, datesColumn, row,
-        getNumberDate, daysColumn, daysOfWeek, getWeekDay, addWeekDatesToArray) {
+        getNumberDate, daysColumn, daysOfWeek, getWeekDay, addWeekDatesToArray, progressColumn) {
         this.request = request;
         this.requestsPerWeek = requestsPerWeek;
         this.headlinesMentions = headlinesMentions;
@@ -17,6 +16,7 @@ export default class Statistics {
         this.arrayWithSortDates = [];
         this.getWeekDay = getWeekDay;
         this.addWeekDatesToArray = addWeekDatesToArray;
+        this.progressColumn = progressColumn;
     }
 
     //Отрисовываем запрос, число новостей и количество упоминаний в заголовках
@@ -24,7 +24,7 @@ export default class Statistics {
         this.request.textContent = '"' + localStorage.getItem('inputValue') + '"'; //запрос
         const result = JSON.parse(localStorage.getItem('res'));
         this.requestsPerWeek.textContent = result.totalResults; //всего новостей
-        this.headlinesMentions.textContent = this.getMentionsInTitles(); //всего упоминаний
+        this.headlinesMentions.textContent = this._getMentionsInTitles(); //всего упоминаний
     }
 
     //В таблице отрисовываем текущий месяц
@@ -35,7 +35,7 @@ export default class Statistics {
     }
 
     //Получаем количество упоминаний в заголовках
-    getMentionsInTitles() {
+    _getMentionsInTitles() {
         const valueReqest = localStorage.getItem('inputValue')
         const results = JSON.parse(localStorage.getItem('res'));
         results.articles.forEach(item => {
@@ -47,7 +47,7 @@ export default class Statistics {
     }
 
     //Получаем сколько было всего упоминаний
-    getTotalMentions() {
+    _getTotalMentions() {
         const valueReqest = localStorage.getItem('inputValue');
         const results = JSON.parse(localStorage.getItem('res'));
         let totalDescripton = 0;
@@ -66,18 +66,18 @@ export default class Statistics {
         return totalTitle + totalDescripton;
     }
 
-    //Получаем даты, переводим их и добавляем в массив
+    //Получаем все даты, которые пришли с api, переводим их и добавляем в массив
     addAllDatesInArray() {
         const results = JSON.parse(localStorage.getItem('res'));
         results.articles.forEach(item => {
             const rightDate = this.getNumberDate(item.publishedAt) //Переводим дату в вид "день месяц год"
             this.arrayWithDates.push(rightDate);
         });
-        this.sortDates(this.arrayWithDates);
+        this._sortDates(this.arrayWithDates);
     }
 
-    //Создаём массив, в котором получаем кол-во новостей за день. Массив начинается с самого позднего дня.
-    sortDates() {
+    //Создаём массив, в котором получаем кол-во новостей за каждый день недели. Массив начинается с самого позднего дня.
+    _sortDates() {
         this.arrayWithDates.sort();
         let current = null;
         let counter = 0;
@@ -99,19 +99,18 @@ export default class Statistics {
 
     //Добавляем рядам заливку в % и указываем упоминания в %
     changeRows() {
-        const total = this.getTotalMentions();
+        const total = this._getTotalMentions();
         for (let i = 0; i < this.arrayWithSortDates.length; i++) {
-            let persent = ((this.arrayWithSortDates[i] * total) / 100).toFixed();
-            const progressColumn = document.querySelector('.board__progress-bar')
-            progressColumn.children[i].textContent = persent;
-            progressColumn.children[i].setAttribute('style', `width: ${persent}%`)
+            const persent = ((this.arrayWithSortDates[i] * total) / 100).toFixed();
+            this.progressColumn.children[i].textContent = persent;
+            this.progressColumn.children[i].setAttribute('style', `width: ${persent}%`)
         }
     }
 
     //Добавляем информацию в колонны(число, день недели)
     аddDatesToColumn() {
         for (let i = 0; i <= 6; i++) {
-            this.datesColumn.children[i].textContent = this.addWeekDatesToArray(i) + ",";
+            this.datesColumn.children[i].textContent = this.addWeekDatesToArray(i);
             this.daysColumn.children[i].textContent = this.getWeekDay(i);
         }
     }

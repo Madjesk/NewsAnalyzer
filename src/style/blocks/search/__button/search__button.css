@@ -32,6 +32,14 @@
   }
 }
 
+@media screen and (max-width: 410px) {
+  .search__button {
+    width: 148px;
+
+  }
+}
+
+
 @media screen and (max-width: 320px) {
   .search__button {
     width: 100%;

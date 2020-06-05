@@ -12,14 +12,39 @@
   background: #FFFFFF;
   border-radius: 16px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
+@media screen and (max-width: 405px) {
+  .commits-card {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .commits-card {
+    width: 370px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .commits-card {
+    padding: 12px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .commits-card {
+    padding: 12px;
+    width: 320px;
+  }
+}
 
 @media screen and (max-width: 320px) {
   .commits-card {
+    height: 264px;
+    padding: 12px;
     width: 288px;
-    padding: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
   }
 }

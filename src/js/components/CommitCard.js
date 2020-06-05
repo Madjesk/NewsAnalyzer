@@ -2,11 +2,11 @@ import getCompleteDate from '../utils/utils';
 
 export default class CommitCard {
     constructor(element) {
-        this.slide = this.createCommitCard(element);
+        this.slide = this._createCommitCard(element);
     }
 
     //Создаём карточку коммита
-    createCommitCard(element) {
+    _createCommitCard(element) {
 
         const slide = document.createElement('div');
         slide.classList.add('swiper-slide');
@@ -52,7 +52,6 @@ export default class CommitCard {
         commitUser.appendChild(commitName);
         commitUser.appendChild(commitMail);
 
-        // console.log(slide);
         return slide;
     }
 }
